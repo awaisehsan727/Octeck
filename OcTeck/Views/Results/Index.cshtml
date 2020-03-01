@@ -1,0 +1,51 @@
+﻿@model IEnumerable<OcTeck.Models.Result>
+@using OcTeck.Models;
+
+<main id="page-content">
+    <!-- // Breadcrumbs  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-9 post-list" style="margin-top: 50px;">
+                @foreach (var item in Model)
+                {
+                    <article class="post-list__item format-standart postS">
+                        <div class="post-list__item-content">
+
+
+                            <header class="post-list__item-header">
+
+                                <table class="text-center col-xs-12">
+                                    <tr>
+
+                                        <th>Product Name</th>
+                                        <td><span class="post-list__item-author">@Html.DisplayFor(modelItem => item.Product.Name)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="post-list__item-author">Total Price</span></th>
+                                        <td><span class="post-list__item-author">@Html.DisplayFor(modelItem => item.total_Price) Rs</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="post-list__item-author">Actual Price</span></th>
+                                        <td><span class="post-list__item-author"></span>@ViewData["price"]</td>
+                                    </tr>
+
+                                </table>
+                                <p style="color: red;font-size:20px;margin-top:20px;margin-left:100px; text-decoration: none;">@ViewData["Login"]</p>
+
+                            </header>
+
+                        </div>
+                    </article>
+                                        }
+                <div class="pagination">
+
+                </div>
+            </div>
+            <aside class="col-xs-12 col-md-4 col-lg-3 sidebar" id="sidebar">
+                <div class="sidebar-block">
+                   
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>

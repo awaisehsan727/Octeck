@@ -1,0 +1,55 @@
+﻿@model IEnumerable<OcTeck.Models.Product>
+@using OcTeck.Models;
+<main id="page-content">
+    <div>
+        <input type="button" style="margin-top: 30px;margin-left:1400px" class="btn text-center" value="Create Products" onclick="location.href = '@Url.Action("Create", "Products")'" />
+        <p style="color: red;font-size:20px;margin-top:20px;margin-left:1400px" text-decoration: none;">@ViewData["Login"]</p>
+    </div>
+    <!-- // Breadcrumbs  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-9 post-list" style="margin-top: 50px;">
+                @foreach (var item in Model)
+                {
+                    <article class="post-list__item format-standart postS">
+                        <div class="post-list__item-content">
+
+
+                            <header class="post-list__item-header">
+
+                                <table class="text-center col-xs-12" style="margin-top: 20px;">
+                                    <tr>
+
+                                        <th>Product Code</th>
+                                        <td><span class="post-list__item-author">@Html.DisplayFor(modelItem => item.Product_Code)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="post-list__item-author">Name Of Product</span></th>
+                                        <td><span class="post-list__item-author">@Html.DisplayFor(modelItem => item.Name)</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th><span class="post-list__item-author">Price</span></th>
+                                        <td><span class="post-list__item-author">@Html.DisplayFor(model => item.Price) Rs</span></td>
+                                    </tr>
+
+                                </table>
+                                <input type="button" style="margin-top: 20px;margin-left:200px" class="btn text-center" value="Add To Cart" onclick="location.href = '@Url.Action("Index", "Products", new { id = item.id })'" />
+                                <input type="button" style="margin-top: 20px;margin-left:10px" class="btn text-center" value="Check Discount" onclick="location.href = '@Url.Action("Index", "Results", new { id = item.id })'" />
+                                
+
+                            </header>
+
+                        </div>
+                    </article>
+                }
+                
+                <div class="pagination">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+

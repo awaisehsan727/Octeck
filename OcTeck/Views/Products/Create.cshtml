@@ -1,0 +1,51 @@
+﻿
+
+<form class="order-details-form" style="margin-top: 200px;" action="/Products/Create" method="post">
+    <div class="inner-form">
+        <h3>Create Product</h3>
+
+        <div class="inner-form__elements">
+            <div class="inner-half">
+
+
+
+                <div class="inner-half__width">
+                    <div class="input-date datetimepicker-wrap">
+                        <h6><label>Product Code</label></h6>
+
+                        <input type="text" placeholder="Prodcuts Code" name="Pcd" required>
+
+                    </div>
+                    <div class="input-time">
+                        <h6><label>Product Name:</label></h6>
+
+                        <input type="text" placeholder="Product Name" name="Pn" required>
+
+                    </div>
+                </div>
+                <div class="inner-half__width">
+                    <div class="input-date datetimepicker-wrap">
+                        <h6><label>Price</label></h6>
+
+                        <input type="text" class="pasheight" placeholder="Price" required name="pr">
+
+                    </div>
+                   
+
+                </div>
+              
+                <div style="margin-top: 14px;">
+                    <button type="submit" class="btn form-control">Add Products</button>
+                </div>
+                <div style="margin-top: 14px;">
+                    <p style="color: red; text-decoration: none;">@ViewData["error"]</p>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+
+        </div>
+    </div>
+</form>

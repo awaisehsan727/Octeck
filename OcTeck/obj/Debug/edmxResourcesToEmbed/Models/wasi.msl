@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OctDataModelStoreContainer" CdmEntityContainer="OctDataEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="OctDataModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="OctDataModel.Result">
+        <MappingFragment StoreEntitySet="Result">
+          <ScalarProperty Name="Basket_Id" ColumnName="Basket_Id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="total_Price" ColumnName="total_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
